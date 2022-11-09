@@ -20,10 +20,6 @@ process.stdin.on("end", (_) => {
 
 function main() {
 
-
-
-  tc= prompt()
-
   var num = readLine();
   num = num.split(" ");
 
