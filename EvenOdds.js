@@ -53,12 +53,12 @@ function main() {
   if (a % 2 == 0) {
     c = a / 2;
   } else {
-    c = ((a + 1)) / 2;
+    c = (a + 1) / 2;
   }
 
   if (b <= c) {
     console.log(b * 2 - 1);
   } else {
-    console.log(((b - c) * 2));
+    console.log((b - c) * 2);
   }
 }

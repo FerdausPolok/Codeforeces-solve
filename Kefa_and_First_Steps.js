@@ -45,7 +45,6 @@ function main() {
       // console.log(flag)
     }
   }
-  
-  console.log(max_count)
 
+  console.log(max_count);
 }

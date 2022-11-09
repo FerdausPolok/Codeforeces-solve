@@ -19,23 +19,19 @@ process.stdin.on("end", (_) => {
 });
 
 function main() {
-
   var num = readLine();
   num = num.split(" ");
 
   a = parseInt(num[0]);
   b = parseInt(num[1]);
 
-  if(a>=b){ 
-    [a, b] = [b, a]
+  if (a >= b) {
+    [a, b] = [b, a];
   }
 
-  if((a+b)%3== 0 && a*2 >=b){
-    console.log("Yes")
+  if ((a + b) % 3 == 0 && a * 2 >= b) {
+    console.log("Yes");
+  } else {
+    console.log("No");
   }
-
-  else{
-    console.log("No")
-  }
-
 }

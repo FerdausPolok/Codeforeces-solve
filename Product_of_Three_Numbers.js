@@ -19,33 +19,30 @@ process.stdin.on("end", (_) => {
 });
 
 function main() {
-    var n = readLine();
-    n = parseInt(n);
-    N= n
-    counter= 0
-    arr1= []
+  var n = readLine();
+  n = parseInt(n);
+  N = n;
+  counter = 0;
+  arr1 = [];
 
-    for(i=2; i*i <= N; i++){
-        if (n % i==0){
-            counter++
-            n= n/i
-            arr1.push(i)
-        }
-        if (counter==2){
-            arr1.push(n)
-            break
-        }
+  for (i = 2; i * i <= N; i++) {
+    if (n % i == 0) {
+      counter++;
+      n = n / i;
+      arr1.push(i);
     }
+    if (counter == 2) {
+      arr1.push(n);
+      break;
+    }
+  }
 
-    if (counter<2){
-        console.log("No")
-    }
-    else if(arr1[0] == arr1[2] || arr1[1] == arr1[2] ){
-        console.log("No")
-    }
-    else{
-        console.log("Yes")
-        console.log(arr1)
-    }
-
+  if (counter < 2) {
+    console.log("No");
+  } else if (arr1[0] == arr1[2] || arr1[1] == arr1[2]) {
+    console.log("No");
+  } else {
+    console.log("Yes");
+    console.log(arr1);
+  }
 }

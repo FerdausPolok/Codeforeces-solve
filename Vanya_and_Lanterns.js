@@ -18,44 +18,40 @@ process.stdin.on("end", (_) => {
   main();
 });
 
-
-
 function main() {
-    var num = readLine();
-    num = num.split(" ");
+  var num = readLine();
+  num = num.split(" ");
 
-    var lightStands = readLine();
-    lightStands = lightStands.split(" ");
+  var lightStands = readLine();
+  lightStands = lightStands.split(" ");
 
-    numOflight= num[0]
-    lengthOfRoad= num[1]
-    
-    // console.log(numOflight)
-    // console.log(lengthOfRoad)
+  numOflight = num[0];
+  lengthOfRoad = num[1];
 
-    lightStands.sort((a, b) => {return a-b}) 
-    // console.log(lightStands)
+  // console.log(numOflight)
+  // console.log(lengthOfRoad)
 
-    maxDiff= 0
-    diff=0 
+  lightStands.sort((a, b) => {
+    return a - b;
+  });
+  // console.log(lightStands)
 
-    for (i=1; i<lightStands.length; i++){
-        diff= lightStands[i] - lightStands[i-1]
-        maxDiff= Math.max(diff, maxDiff)
-    }
+  maxDiff = 0;
+  diff = 0;
 
-    ans= maxDiff/2
-    
-    firstGap= lightStands[0]- 0
-    lastGap= lengthOfRoad- lightStands[lightStands.length- 1]
+  for (i = 1; i < lightStands.length; i++) {
+    diff = lightStands[i] - lightStands[i - 1];
+    maxDiff = Math.max(diff, maxDiff);
+  }
 
-    
-    if ( (firstGap > ans) || (lastGap> ans) ){
-        console.log(Math.max(firstGap, lastGap))
-    }
+  ans = maxDiff / 2;
 
-    else{
-        console.log(ans)
-    }
+  firstGap = lightStands[0] - 0;
+  lastGap = lengthOfRoad - lightStands[lightStands.length - 1];
 
+  if (firstGap > ans || lastGap > ans) {
+    console.log(Math.max(firstGap, lastGap));
+  } else {
+    console.log(ans);
+  }
 }
