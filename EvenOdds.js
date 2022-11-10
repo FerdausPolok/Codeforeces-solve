@@ -1,3 +1,4 @@
+//Codeforces Tempalte starts from here
 process.stdin.resume();
 process.stdin.setEncoding("utf-8");
 
@@ -22,6 +23,7 @@ process.stdin.on("end", (_) => {
 
   main();
 });
+//Codeforces Tempalte ends here
 
 function main() {
   var num = readLine();

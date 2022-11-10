@@ -1,3 +1,4 @@
+//Codeforces Tempalte starts from here
 process.stdin.resume();
 process.stdin.setEncoding("utf-8");
 
@@ -22,19 +23,22 @@ process.stdin.on("end", (_) => {
 
   main();
 });
+//Codeforces Tempalte ends here
 
 function main() {
   var given_str = readLine();
   str_len = given_str.length;
+
   flag = false;
 
-  rest_of_the_letters = "";
+  rest_of_the_letters = ""; //except the first one
+
   for (i = 1; i < str_len; i++) {
     rest_of_the_letters += given_str[i];
   }
 
   if (rest_of_the_letters.toUpperCase() === rest_of_the_letters) {
-    flag = true;
+    flag = true; //means we have all the capital letters after the first one
   }
 
   if (flag) {
@@ -42,7 +46,8 @@ function main() {
 
     if (first_letter.toUpperCase() == first_letter) {
       console.log(given_str.toLowerCase());
-    } else {
+    } 
+    else {
       if (first_letter.charCodeAt(0) > 96) {
         first_letter = String.fromCharCode(first_letter.charCodeAt(0) - 32);
       }
@@ -54,4 +59,5 @@ function main() {
   } else {
     console.log(given_str);
   }
+  
 }
